@@ -305,3 +305,27 @@ DATEPART(hour, OraInizio) as Ora,
 datepart(Minute, OraInizio) as Minuti,
 datepart(second, OraInizio) as Secondi
 from Lezioni;
+
+
+
+/*
+RIGHT JOIN
+ fa il contrario della "LEFT JOIN"
+ Restituisce tutti i record della tabella destra
+*/
+
+SELECT *
+FROM Studenti s
+RIGHT JOIN Iscrizioni i
+ON i.StudenteId = s.StudenteId
+
+SELECT 
+s.Nome + ' ' + s.Cognome AS Studente,
+s.CodiceFiscale AS CF,
+ISNULL (CONVERT(VARCHAR,i.dataiscrizione,104), 'Data non definita') AS [Data iscrizione]
+FROM Studenti s
+RIGHT JOIN Iscrizioni i
+ON i.StudenteId = s.StudenteId
+
+-------------------------------------------
+
