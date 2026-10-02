@@ -271,5 +271,5 @@ SELECT * FROM Studenti
 
 INSERT INTO Iscrizioni
 (StudenteId, CorsoID,Stato)
-values (43,3, Null, 'non attivo')
+values (4,3, Null, 'non attivo')
 
