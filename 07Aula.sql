@@ -266,4 +266,10 @@ GROUP BY s.Nome, s.Cognome, s.DatadiNascita, s.CodiceFiscale, c.Nomedelcorso, d.
 
 
 
->>>>>>> e5d9df5121cb5bd6ffb1f6e5a8cb2e80999ba754
+
+SELECT * FROM Studenti
+
+INSERT INTO Iscrizioni
+(StudenteId, CorsoID,Stato)
+values (43,3, Null, 'non attivo')
+
